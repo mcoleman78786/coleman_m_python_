@@ -7,6 +7,13 @@ player = False
 # make the computer pick one item at random
 computer_choice = choices[randint(0, 2)]
 
+
+# set lives for computer and player
+player = 3
+computer_choice = 3
+
+player = False
+
 # show the computer's choice in the terminal window
 print("computer_choices:", computer_choice)
 
