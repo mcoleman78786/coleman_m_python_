@@ -22,13 +22,14 @@ print("computer_choices:", computer_choice)
 
 # set up our loop
 while player is False:
-	print("============================================")
-	print("Player lives:", player_lives, "/5")
-	print("computer_lives lives:", computer_lives, "/5")
-	print("============================================")
+    print("============================================")
+    print("Player lives:", player_lives, "/5")
+    print("computer_lives lives:", computer_lives, "/5")
+    print("============================================")
     # set player to True by making a selection
     print("Choose your weapon!")
     input("Rock, Paper or Scissors?")
+
 
     print(player, "\n")
 
@@ -40,6 +41,7 @@ while player is False:
     elif player == "Rock":
         if computer_choice == "Paper":
             # computer won. crap!!
+            player_lives = player_lives -1
             print("You lose! Paper covers Rock")
         else:
             # we win! such winning
@@ -47,19 +49,21 @@ while player is False:
 
     elif player == "Paper":
         if computer_choice == "Scissors":
+        	 player_lives = player_lives -1
             print("You lose!", computer_choice, "cut", player)
         else:
             print("You won!", player, "covers", computer_choice)
 
     elif player == "Scissors":
         if computer_choice == "Rock":
+        	 computer_lives = computer_lives -1 
             print("You lose!", computer_choice, "smashes", player)
         else:
             print("You win!", player, "cuts", computer_choice)
     elif player == "Quit":
         exit()
     else:
-        print(" Not a vlaid option..Check your spelling... that's not a valid choice\n")
+        print(" Not a vlaid option..Check again, check your spelling\n")
 
 # reset the game loop and start over again
     player = False
