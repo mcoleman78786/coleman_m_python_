@@ -4,6 +4,9 @@ from random import randint
 choices = ["Rock", "Paper", "Scissors"]
 player = False
 
+player_lives = 5
+computer_lives = 5
+
 # make the computer pick one item at random
 computer_choice = choices[randint(0, 2)]
 
@@ -19,6 +22,10 @@ print("computer_choices:", computer_choice)
 
 # set up our loop
 while player is False:
+	print("============================================")
+	print("Player lives:", player_lives, "/5")
+	print("computer_lives lives:", computer_lives, "/5")
+	print("============================================")
     # set player to True by making a selection
     print("Choose your weapon!")
     input("Rock, Paper or Scissors?")
@@ -48,13 +55,12 @@ while player is False:
         if computer_choice == "Rock":
             print("You lose!", computer_choice, "smashes", player)
         else:
-            print("You win!", player, "cut", computer_choice)
-    elif player == "quit":
+            print("You win!", player, "cuts", computer_choice)
+    elif player == "Quit":
         exit()
     else:
-        print("Check your spelling... that's not a valid choice\n")
+        print(" Not a vlaid option..Check your spelling... that's not a valid choice\n")
 
 # reset the game loop and start over again
     player = False
     computer_choice = choices[randint(0, 2)]
-
